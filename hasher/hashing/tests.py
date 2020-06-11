@@ -45,12 +45,25 @@ class UnitTestCase(TestCase):
         #assert string passed back is correct
         self.assertEqual('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', text_hash)
 
-    def test_hashan_object(self):
+    def saveHash(self):
         #create objecct
         hash = Hash()
         hash.text = 'hello'
         hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
         hash.save()
+        return hash
+
+    def test_hashan_object(self):
+        #create objecct
+        hash = self.saveHash()
         #check database for hash
         pulled_hash = Hash.objects.get(hash='2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
         self.assertEqual(hash.text, pulled_hash.text)
+
+    #test for viewing hash
+    def test_viewinghash(self):
+        #create objecct
+        hash = self.saveHash()
+        #check hash/<object> is working
+        response = self.client.get('/hash/2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
+        self.assertContains(response, 'hello')

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import HashForm
 from .models import Hash
 import hashlib
@@ -17,6 +17,13 @@ def home(request):
                 hash.text = text
                 hash.hash = text_hash
                 hash.save()
+            #send user to new page
+            return redirect('hash', hash=text_hash)
 
     form = HashForm()
     return render(request, 'hashing/home.html', {'form':form})
+
+#incoming hash request
+def hash(request, hash):
+    hash = Hash.objects.get(hash=hash)
+    return render(request, 'hashing/hash.html', {'hash':hash})
