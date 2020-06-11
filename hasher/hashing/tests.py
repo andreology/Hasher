@@ -2,6 +2,7 @@ from django.test import TestCase
 from selenium import webdriver
 from .forms import HashForm
 import hashlib
+from .models import Hash
 
 #functional test class
 # class FunctionalTestCase(TestCase):
@@ -43,3 +44,13 @@ class UnitTestCase(TestCase):
         text_hash = hashlib.sha256('hello'.encode('utf-8')).hexdigest()
         #assert string passed back is correct
         self.assertEqual('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824', text_hash)
+
+    def test_hashan_object(self):
+        #create objecct
+        hash = Hash()
+        hash.text = 'hello'
+        hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+        hash.save()
+        #check database for hash
+        pulled_hash = Hash.objects.get(hash='2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
+        self.assertEqual(hash.text, pulled_hash.text)
