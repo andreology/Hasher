@@ -3,3 +3,13 @@
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1591898032679	Marionette	INFO	Listening on port 6641
 1591898032731	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591898632869	Marionette	INFO	Stopped listening on port 6641
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+e/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591898605890	Marionette	INFO	Listening on port 6784
+1591898606239	Marionette	WARN	TLS certificate errors will be ignored for this session

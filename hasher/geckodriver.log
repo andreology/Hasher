@@ -1,0 +1,64 @@
+1591899157555	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\baraj\\AppData\\Local\\Temp\\rust_mozprofileBZTfHt"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591899161899	Marionette	INFO	Listening on port 6857
+1591899162276	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591899189958	Marionette	INFO	Stopped listening on port 6857
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591899194210	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\baraj\\AppData\\Local\\Temp\\rust_mozprofileeK8xQv"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591899198587	Marionette	INFO	Listening on port 6900
+1591899198925	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591899225528	Marionette	INFO	Stopped listening on port 6900
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591899267865	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\baraj\\AppData\\Local\\Temp\\rust_mozprofilexaHF33"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591899272330	Marionette	INFO	Listening on port 6944
+1591899272581	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591899279160	Marionette	INFO	Stopped listening on port 6944
+console.warn: services.settings: main/cfr-fxa sync interrupted by shutdown
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591899458358	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\baraj\\AppData\\Local\\Temp\\rust_mozprofileTC9Vxc"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591899461870	Marionette	INFO	Listening on port 7001
+1591899461971	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591899468984	Marionette	INFO	Stopped listening on port 7001
+console.warn: services.settings: main/cfr-fxa sync interrupted by shutdown
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591899607022	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\baraj\\AppData\\Local\\Temp\\rust_mozprofile0Y3YsS"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591899611226	Marionette	INFO	Listening on port 7048
+1591899611245	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591899613922	Marionette	INFO	Stopped listening on port 7048
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 27: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+JavaScript error: resource://services-settings/RemoteSettingsClient.jsm, line 115: Error: Unknown callback
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+JavaScript error: resource://activity-stream/lib/DiscoveryStreamFeed.jsm, line 860: TypeError: items is undefined
+JavaScript error: resource://activity-stream/lib/DiscoveryStreamFeed.jsm, line 860: TypeError: items is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
