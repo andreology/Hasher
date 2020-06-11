@@ -3,31 +3,32 @@ from selenium import webdriver
 from .forms import HashForm
 import hashlib
 from .models import Hash
+from django.core.exceptions import ValidationError
 
 #functional test class
-# class FunctionalTestCase(TestCase):
-#
-#     def setUp(self):
-#         self.browser = webdriver.Firefox()
-#
-#     def test_homepage_isup(self):
-#         self.browser.get('http://localhost:8000')
-#         self.assertIn('Enter hash here:', self.browser.page_source)
-#
-#     def test_hash_of_hello(self):
-#         self.browser.get('http://localhost:8000')
-#         self.assertIn('Enter hash here:', self.browser.page_source)
-#         #find element on the screen where text can be input
-#         text = self.browser.find_element_by_id('id_text')
-#         text.send_keys('hello')
-#         self.browser.find_element_by_name('submit').click()
-#         #result hash should be displayed
-#         self.assertIn('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824',
-#                       self.browser.page_source)
-#
-#     def tearDown(self):
-#         #shutdown and close browser
-#         self.browser.quit()
+class FunctionalTestCase(TestCase):
+
+    def setUp(self):
+        self.browser = webdriver.Firefox()
+
+    def test_homepage_isup(self):
+        self.browser.get('http://localhost:8000')
+        self.assertIn('Enter hash here:', self.browser.page_source)
+
+    def test_hash_of_hello(self):
+        self.browser.get('http://localhost:8000')
+        self.assertIn('Enter hash here:', self.browser.page_source)
+        #find element on the screen where text can be input
+        text = self.browser.find_element_by_id('id_text')
+        text.send_keys('hello')
+        self.browser.find_element_by_name('submit').click()
+        #result hash should be displayed
+        self.assertIn('2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824',
+                      self.browser.page_source)
+
+    def tearDown(self):
+        #shutdown and close browser
+        self.browser.quit()
 
 class UnitTestCase(TestCase):
 
@@ -67,3 +68,10 @@ class UnitTestCase(TestCase):
         #check hash/<object> is working
         response = self.client.get('/hash/2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824')
         self.assertContains(response, 'hello')
+
+    def test_badinput(self):
+        def badHash():
+            hash = Hash()
+            hash.hash = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824as'
+            hash.full_clean()
+        self.assertRaises(ValidationError, badHash)
