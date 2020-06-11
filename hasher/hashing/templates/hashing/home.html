@@ -15,13 +15,13 @@
 
 
     $.ajax({
-      url: 'quickhash',
+      url: '/quickhash',
       data: {
         'text': text
       },
       dataType: 'json',
       success: function (data) {
-        $('#quickhash').text(data['hash'])
+        $('#quickhash').text(data['hash']);
       }
     });
   });
